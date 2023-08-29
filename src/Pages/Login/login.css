@@ -16,10 +16,14 @@
     flex-direction: column;
 }
 
-.input-form-senha {
+.input-form-password {
     margin-top: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.input-form-button {
+    margin-top: 5vh;
 }

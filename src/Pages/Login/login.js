@@ -15,10 +15,13 @@ const Login = () => {
                     <span>LOGIN: </span>
                     <input type="text" placeholder="Insira seu login"/>
                 </div>
-                <div className="input-form-senha">
+                <div className="input-form-password">
                     <span>SENHA: </span>
                     <input type="password" placeholder="Insira sua senha"/>
                 </div> 
+                <div className="input-form-button">
+                    <button>ACESSAR</button>
+                </div>
             </form>
         </main>
     )
