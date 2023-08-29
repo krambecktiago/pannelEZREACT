@@ -1,12 +1,10 @@
 import React from 'react'
 
-import './Footer.css'
+import './footer.css'
 
 const Footer = () => (
     <footer className="app-footer">
-        <span className="app-footer__message">
-            blog.matheuscastiglioni.com.br
-        </span>
+        <p>Todos os direitos reservados  © <span> KRAMBECK AUTO PEÇAS</span></p>
     </footer>
 )
 

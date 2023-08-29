@@ -1,8 +1,16 @@
+import Container from "./Components/Container/Container";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
+
+//css APP
+import "./App.css"
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="container-main">
+      <Header/>
+      <Container/>
+      <Footer/>
     </div>
   );
 }

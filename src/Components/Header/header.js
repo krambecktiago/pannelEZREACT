@@ -1,13 +1,15 @@
 import React from 'react'
+import './header.css'
 
-import Menu from '../menu'
 
-import './Header.css'
+//imagem do header "KRAMBECK"
+import IMG from '../../img/Logo_Krambeck.png'
+
+
 
 const Header = () => (
     <header className="app-header">
-        <span className="app-header__logo"/>
-        <Menu />
+        <img src={IMG}/> 
     </header>
 )
 

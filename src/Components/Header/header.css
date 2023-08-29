@@ -1,13 +1,8 @@
 .app-header {
+    color: black;
     align-items: center;
-    background: #dcdcdc;
+    background-color: #fff;
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
-}
-
-.app-header__logo {
-    background: #999;
-    height: 25px;
-    width: 100px;
-}
+    height: 10vh;
+};
