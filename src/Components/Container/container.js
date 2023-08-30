@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './container.css'
-import Login from '../../Pages/Login/Login'
+import Login from '../../Pages/Login/login'
 
 const Container = () => (
     <main className="app-container">

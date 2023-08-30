@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
 .form-content {
     background-color: rgba(255, 255, 255, 0.555);
     border-radius: 1vh;
@@ -9,6 +11,25 @@
     flex-direction: column;
 }
 
+.title-form{
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-form h1 {
+    font-size: 50px;
+    margin-bottom: -2vh;
+    font-family: "Archivo", sans-serif;
+}
+
+.title-form h5 {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .input-form-login {
     display: flex;
     align-items: center;
@@ -16,14 +37,65 @@
     flex-direction: column;
 }
 
+.input-form-login span {
+    font-size: 24px;
+    font-family: "Cinzel", sans-serif;
+}
+
+.input-form-login input {
+    border-radius: 1vh;
+    border: none;
+    padding: 0.8vh;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-form-login input:hover {
+    box-shadow: 5px 5px 50px white;
+}
+
 .input-form-password {
-    margin-top: 2vh;
+    margin-top: 4vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
+.input-form-password span {
+    font-size: 24px;
+    font-family: "Cinzel", sans-serif;
+}
+
+.input-form-password input {
+    border-radius: 1vh;
+    border: none;
+    padding: 0.8vh;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-form-password input:hover {
+    box-shadow: 5px 5px 50px white;
+}
+
 .input-form-button {
     margin-top: 5vh;
+}
+
+.input-form-button button {
+    padding: 1vh 3vh;
+    border-radius: 2vh;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.555);
+    font-family: "Cinzel", sans-serif;
+    font-size: 24px;
+}
+.input-form-button button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid white;
+    box-shadow: 5px 5px 50px white;
 }
