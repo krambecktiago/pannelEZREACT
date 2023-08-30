@@ -44,17 +44,21 @@
 }
 
 .input-form-login input {
-    border-radius: 1vh;
+    color: rgba(255, 255, 255, 0.5);
     border: none;
     padding: 0.8vh;
     font-size: 16px;
     width: 100%;
     text-align: center;
+    background-color: transparent;
+    border-bottom: 2px solid white;
 }
 
-.input-form-login input:hover {
-    box-shadow: 5px 5px 50px white;
-}
+.input-form-login input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
+
 
 .input-form-password {
     margin-top: 4vh;
@@ -70,17 +74,20 @@
 }
 
 .input-form-password input {
-    border-radius: 1vh;
+    color: rgba(255, 255, 255, 0.5);
     border: none;
     padding: 0.8vh;
     font-size: 16px;
     width: 100%;
     text-align: center;
+    background-color: transparent;
+    border-bottom: 2px solid white;
 }
 
-.input-form-password input:hover {
-    box-shadow: 5px 5px 50px white;
-}
+.input-form-password input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
 
 .input-form-button {
     margin-top: 5vh;
