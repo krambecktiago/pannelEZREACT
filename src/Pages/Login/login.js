@@ -16,15 +16,18 @@ const Login = () => {
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
 
-        if (email.value === "tiago@krambeck.com.br") {
+        if (email === "tiago@krambeck.com.br" && password === 'admin') {
             console.log("email corretamente informado")
+
+            const formulario = document.querySelector(".form-content")
+            formulario.reset()
 
         } else {
             console.log("erro")
         }
     }
 
-
+    //componentes da tela login
     return(
         <main>
             <form onSubmit={botaoHandler} className="form-content">
