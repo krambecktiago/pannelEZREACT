@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-
-
+import React from 'react';
 import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom'
 
 
@@ -8,12 +6,15 @@ import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom'
 import Login from "./Pages/Login/login";
 
 
-const Router = () => {
-    <BrowserRouter>
-        <Routes>
-            <Route exact path='/' Component={Login} />
-        </Routes>
-    </BrowserRouter>
+const Routerr = () => {
+    return(
+        <BrowserRouter>
+            <Routes>
+                <Route exact path='/' Component={Login} />
+            </Routes>
+        </BrowserRouter>
+    )
+
 }
 
-export default Router
+export default Routerr

@@ -1,14 +1,14 @@
-import Container from "./Components/Container/container";
-import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
-
 //routes
-
+import Routerr from "./router";
 
 //css APP
 import "./App.css"
-import Routes from "./router";
 
-const App = () => <Routes />
+
+const App = () => {
+    return (
+        <Routerr />
+    )
+}
 
 export default App;

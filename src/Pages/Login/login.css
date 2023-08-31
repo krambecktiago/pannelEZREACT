@@ -1,4 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100vw;
+}
+
+footer {
+    width: 100vw;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
 
 .form-content {
     background-color: rgba(27, 27, 27, 0.555);
@@ -22,7 +42,6 @@
 
 .title-form h1 {
     font-size: 50px;
-    margin-bottom: -2vh;
     font-family: "Archivo", sans-serif;
 }
 
@@ -103,7 +122,7 @@
 }
 .input-form-button button:hover {
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.6);
     border: 1px solid white;
-    box-shadow: 5px 5px 50px white;
+    box-shadow: 5px 5px 50px  rgba(255, 255, 255, 0.6);
 }

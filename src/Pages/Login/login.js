@@ -29,14 +29,16 @@ const Login = () => {
             formulario.reset()
 
         } else {
-            console.alert("Não foi possível entrar na conta pois os dados estão incorretos")
+            alert("Não foi possível entrar na conta pois os dados estão incorretos")
         }
     }
 
     //componentes da tela login
     return(
         <main>
-            <Header/>
+            <header>
+                <Header/>
+            </header>
             <form onSubmit={botaoHandler} className="form-content">
                 <div className="title-form">
                     <h1>BEM VINDO!</h1>
@@ -54,7 +56,9 @@ const Login = () => {
                     <button onClick={(confirmAccess)}>ACESSAR</button>
                 </div>
             </form>
-            <Footer/>
+            <footer>
+                <Footer/>
+            </footer>
         </main>
     )
 
