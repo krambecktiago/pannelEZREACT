@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Navigate, useNavigate } from "react-router-dom";
+
 //estilização
 import './login.css'
 
@@ -9,6 +11,8 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     //definindo preventDefault no form
     function botaoHandler(event){
@@ -24,6 +28,7 @@ const Login = () => {
 
         if (email === "tiago@krambeck.com.br" && password === 'admin') {
             alert("login efeutado com sucesso!")
+            navigate('./pannel')
 
             const formulario = document.querySelector(".form-content")
             formulario.reset()

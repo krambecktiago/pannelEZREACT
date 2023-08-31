@@ -1,0 +1,25 @@
+header {
+    width: 100vw;
+}
+
+footer {
+    width: 100vw;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-content {
+    background-color: rgba(27, 27, 27, 0.555);
+    color: white;
+    border-radius: 1vh;
+    height: 70vh;
+    width: 30vw;
+    margin-right: 10vh;
+}
