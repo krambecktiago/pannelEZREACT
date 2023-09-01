@@ -10,9 +10,16 @@ import './login.css'
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 
-const Login = () => {
 
+
+//database configs
+import { Pool } from "pg";
+import dbConfig from "../../config";
+
+
+const Login = () => {
     const navigate = useNavigate();
+    const pool = new Pool(dbConfig);
 
     //definindo preventDefault no form
     function botaoHandler(event){
@@ -26,7 +33,18 @@ const Login = () => {
         const password = document.getElementById("password").value
 
 
+
         if (email === "tiago@krambeck.com.br" && password === 'admin') {
+
+            poll.query('SELEC * FROM CadastroClientes WHERE administrador == true', (err, result) => {
+                if (err) {
+                    console.log('não foi possível buscar os bancos de db')
+                } else {
+                    console.log(result)
+                }
+            })
+
+
             alert("login efeutado com sucesso!")
             navigate('./pannel')
 
@@ -40,7 +58,7 @@ const Login = () => {
 
     //componentes da tela login
     return(
-        <main>
+        <main className="main-login">
             <header>
                 <Header/>
             </header>

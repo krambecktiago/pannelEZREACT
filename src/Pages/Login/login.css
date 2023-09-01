@@ -11,7 +11,7 @@ footer {
     width: 100vw;
 }
 
-main {
+.main-login {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

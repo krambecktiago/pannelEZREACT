@@ -11,11 +11,11 @@ import './pannel.css'
 
 const Pannel = () => {
   return (
-    <main>
+    <main className='main-pannel'>
       <header>
         <Header />
       </header>
-      <div className='main-content'>
+      <div className='main-container'>
       </div>
       <footer>
         <Footer/>
