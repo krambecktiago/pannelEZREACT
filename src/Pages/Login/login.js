@@ -5,6 +5,9 @@ import { Navigate, useNavigate } from "react-router-dom";
 //estilização
 import './login.css'
 
+//axios
+import Axios from "axios";
+
 
 //components
 import Header from "../../Components/Header/Header";
@@ -12,14 +15,8 @@ import Footer from "../../Components/Footer/Footer";
 
 
 
-//database configs
-import { Pool } from "pg";
-import dbConfig from "../../config";
-
-
 const Login = () => {
     const navigate = useNavigate();
-    const pool = new Pool(dbConfig);
 
     //definindo preventDefault no form
     function botaoHandler(event){
@@ -28,33 +25,18 @@ const Login = () => {
     }
 
     //configurando valiudação de crendenciais 
-    const confirmAccess = () => {
+    const confirmAccess = (values) => {
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
 
-
-
-        if (email === "tiago@krambeck.com.br" && password === 'admin') {
-
-            poll.query('SELEC * FROM CadastroClientes WHERE administrador == true', (err, result) => {
-                if (err) {
-                    console.log('não foi possível buscar os bancos de db')
-                } else {
-                    console.log(result)
-                }
-            })
-
-
-            alert("login efeutado com sucesso!")
-            navigate('./pannel')
-
-            const formulario = document.querySelector(".form-content")
-            formulario.reset()
-
-        } else {
-            alert("Não foi possível entrar na conta pois os dados estão incorretos")
-        }
-    }
+        Axios.post('http://localhost:5432/login', {
+            email: values.email,
+            password: values.password,
+            administrador: values.true,
+        }).then((response) => {
+            console.log(response);
+        });
+    };
 
     //componentes da tela login
     return(
