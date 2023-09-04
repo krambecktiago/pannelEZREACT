@@ -26,17 +26,28 @@ const Login = () => {
 
     //configurando valiudação de crendenciais 
     const confirmAccess = (values) => {
-        const email = document.getElementById("email").value
-        const password = document.getElementById("password").value
 
-        Axios.post('http://localhost:5432/login', {
-            email: values.email,
-            password: values.password,
-            administrador: values.true,
-        }).then((response) => {
-            console.log(response);
-        });
-    };
+
+
+        Axios.get('http://localhost:5432/login')
+            .then((response, values) => {
+                const email = document.querySelector('#email').value
+                const password = document.querySelector('#password').value
+
+                if(email == values.email_vendedor && password == values.senha) {
+                    console.log(response);
+
+                    navigate('../Pannel/pannel')
+                } else {
+                    console.log('Erro')
+                }
+
+                
+            })
+            .catch((error) => {
+            console.log(JSON.stringify(error))
+        })
+    }
 
     //componentes da tela login
     return(
@@ -58,7 +69,7 @@ const Login = () => {
                     <input type="password" name="password" id="password" placeholder="Insira sua senha"/>
                 </div> 
                 <div className="input-form-button">
-                    <button onClick={(confirmAccess)}>ACESSAR</button>
+                    <button type="submit" onClick={confirmAccess}>ACESSAR</button>
                 </div>
             </form>
             <footer>
