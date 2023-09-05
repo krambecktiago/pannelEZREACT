@@ -12,6 +12,7 @@ import Axios from "axios";
 //components
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import { useState } from "react";
 
 
 
@@ -27,21 +28,21 @@ const Login = () => {
     //configurando valiudação de crendenciais 
     const confirmAccess = (values) => {
 
+        const Login = () => {
+            const [email, setEmail] = useState('');
+            const [password, setPassword] = useState('');
+            const [message, setMessage] = useState('');
+        }
 
+        Axios.get('http://localhost:5432?email=${email_vendedor}&password=${senhas}')
+            .then((response) => {
 
-        Axios.get('http://localhost:5432/login')
-            .then((response, values) => {
-                const email = document.querySelector('#email').value
-                const password = document.querySelector('#password').value
-
-                if(email == values.email_vendedor && password == values.senha) {
-                    console.log(response);
-
+                if (response.status === 200) {
+                    console.log(response.data);
                     navigate('../Pannel/pannel')
                 } else {
                     console.log('Erro')
                 }
-
                 
             })
             .catch((error) => {
@@ -81,4 +82,4 @@ const Login = () => {
 
 }
 
-export default Login
+export default Login;
