@@ -28,15 +28,9 @@ const Login = () => {
     //configurando valiudação de crendenciais 
     const confirmAccess = (values) => {
 
-        const Login = () => {
-            const [email, setEmail] = useState('');
-            const [password, setPassword] = useState('');
-            const [message, setMessage] = useState('');
-        }
-
         Axios.get('http://localhost:5432?email=${email_vendedor}&password=${senhas}')
             .then((response) => {
-
+                
                 if (response.status === 200) {
                     console.log(response.data);
                     navigate('../Pannel/pannel')
