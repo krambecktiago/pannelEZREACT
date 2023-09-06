@@ -26,14 +26,35 @@ const Login = () => {
     }
 
     //configurando valiudação de crendenciais 
-    const confirmAccess = (values) => {
+    const confirmAccess = () => {
 
-        Axios.get('http://localhost:5432?email=${email_vendedor}&password=${senhas}')
+        const email = document.querySelector('#email').value
+        const password = document.querySelector('#password').value
+
+        Axios.get(`http://localhost:5432/administradores`)
             .then((response) => {
-                
+
                 if (response.status === 200) {
+
+
                     console.log(response.data);
-                    navigate('../Pannel/pannel')
+
+                    const email_vendedor = response.data.find()
+                    const senhas = response.data.find()
+                    
+                    if(email === email_vendedor && password === senhas){
+                        console.log('funcionou')
+                        navigate('../Pannel/pannel')
+                    } else {
+
+                        console.log(email)
+                        console.log(email_vendedor)
+
+                        alert('Dados inseridos incorretamente')
+                        navigate('/')
+                        document.querySelector('#email').value = ''; //limpa o campo de email
+                        document.querySelector('#password').value = ''; //limpa o campo senha
+                    }
                 } else {
                     console.log('Erro')
                 }
